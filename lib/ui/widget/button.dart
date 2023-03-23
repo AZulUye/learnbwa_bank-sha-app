@@ -61,13 +61,6 @@ class CustomTextButton extends StatelessWidget {
       height: height,
       child: TextButton(
         onPressed: onPressed,
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => const SignInPage(),
-        //   ),
-        // );
-
         style: TextButton.styleFrom(
           padding: EdgeInsets.zero,
         ),

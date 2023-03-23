@@ -1,5 +1,4 @@
 import 'package:banksha/shared/theme.dart';
-import 'package:banksha/ui/page/sign_in_page.dart';
 import 'package:banksha/ui/widget/button.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +104,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           children: [
                             CustomFilledButton(
                               title: 'Get Started',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamedAndRemoveUntil(
+                                    context, '/sign-up', (route) => false);
+                              },
                             ),
                             const SizedBox(
                               height: 20,
@@ -113,12 +115,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             CustomTextButton(
                               title: 'Sign In',
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const SignInPage(),
-                                  ),
-                                );
+                                Navigator.pushNamedAndRemoveUntil(
+                                    context, '/sign-in', (route) => false);
                               },
                             ),
                           ],
