@@ -1,5 +1,11 @@
+import 'package:banksha/shared/theme.dart';
 import 'package:banksha/ui/page/home_page.dart';
 import 'package:banksha/ui/page/onboarding_page.dart';
+import 'package:banksha/ui/page/pin_page.dart';
+import 'package:banksha/ui/page/profile_edit_page.dart';
+import 'package:banksha/ui/page/profile_edit_pin_page.dart';
+import 'package:banksha/ui/page/profile_edit_success_page.dart';
+import 'package:banksha/ui/page/profile_page.dart';
 import 'package:banksha/ui/page/sign_in_page.dart';
 import 'package:banksha/ui/page/sign_up_page.dart';
 import 'package:banksha/ui/page/sign_up_set_ktp_page.dart';
@@ -19,6 +25,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: lightBackgroundColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: lightBackgroundColor,
+          elevation: 0,
+          centerTitle: true,
+          iconTheme: IconThemeData(
+            color: blackColor,
+          ),
+          titleTextStyle: blackTextStyle.copyWith(
+            fontSize: 20,
+            fontWeight: semiBold,
+          ),
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const SplashPage(),
@@ -29,6 +50,11 @@ class MyApp extends StatelessWidget {
         '/sign-up-set-ktp': (context) => const SignUpSetKTPPage(),
         '/sign-up-success': (context) => const SignUpSuccessPage(),
         '/home': (context) => const HomePage(),
+        '/profile': (context) => const ProfilePage(),
+        '/pin': (context) => const PinPage(),
+        '/profile-edit': (context) => const ProfileEditPage(),
+        '/profile-edit-pin': (context) => const ProfileEditPinPage(),
+        '/profile-edit-success': (context) => const ProfileEditSuccessPage(),
       },
     );
   }

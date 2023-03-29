@@ -44,7 +44,9 @@ class HomeUserItem extends StatelessWidget {
             style: blackTextStyle.copyWith(
               fontSize: 12,
               fontWeight: medium,
+              overflow: TextOverflow.ellipsis,
             ),
+            maxLines: 2,
           ),
         ],
       ),
