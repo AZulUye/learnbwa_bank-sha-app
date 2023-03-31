@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
-  void _handleButtonpress(BuildContext context) async {}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -138,7 +138,7 @@ class _PinPageState extends State<PinPage> {
                       addPin('9');
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 60,
                     height: 60,
                   ),
