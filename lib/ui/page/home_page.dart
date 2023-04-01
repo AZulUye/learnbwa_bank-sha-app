@@ -301,7 +301,9 @@ class HomePage extends StatelessWidget {
               HomeServiceItem(
                 iconUrl: 'assets/ic_send.png',
                 title: 'Send',
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, '/transfer');
+                },
               ),
               HomeServiceItem(
                 iconUrl: 'assets/ic_withdraw.png',
@@ -311,7 +313,12 @@ class HomePage extends StatelessWidget {
               HomeServiceItem(
                 iconUrl: 'assets/ic_more.png',
                 title: 'More',
-                onTap: () {},
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => const MoreDiaglog(),
+                  );
+                },
               ),
             ],
           )
@@ -477,5 +484,14 @@ class HomePage extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class MoreDiaglog extends StatelessWidget {
+  const MoreDiaglog({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
